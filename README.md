@@ -1,60 +1,60 @@
-#  Smart To-Do List Bot
+#  Smart To Do List Bot
 
-An AI-powered Telegram automation bot built with **n8n**, **OpenAI**, and **Telegram**.  
-The bot is designed to automate task-related interactions and provide smart, AI-generated responses directly through Telegram.
+An AI-powered **Smart To Do List Bot** built using **n8n, Telegram, OpenAI, and Google Sheets**.
 
-This project demonstrates how workflow automation and AI can be combined to create a useful productivity assistant.
+This automation allows users to manage their daily tasks directly through Telegram. Users can create, view, complete, and delete tasks using simple natural-language messages.
 
 ---
 
-## 🚀 Features
+##  Features
 
--  AI-powered task assistance
--  Telegram-based interaction
--  OpenAI Chat Model integration
--  Automated workflow using n8n
--  Scheduled workflow execution
--  Automatic Telegram message delivery
--  Easy-to-customize automation workflow
--  Accessible directly from Telegram
+-  Manage tasks directly through Telegram
+-  AI-powered task understanding using OpenAI
+-  Create new tasks
+-  Get/View existing tasks
+-  Mark tasks as completed
+-  Delete tasks
+-  AI Agent understands natural-language commands
+-  Google Sheets used for task storage
+-  Fully automated workflow using n8n
+-  Real-time task management
 
 ---
 
 ##  Technologies Used
 
 | Technology | Purpose |
-|------------|---------|
+|-----------|---------|
 | **n8n** | Workflow automation |
-| **Telegram Bot API** | Send and receive messages |
-| **OpenAI** | AI-powered response generation |
-| **AI Agent** | Processes user/task-related requests |
-| **Schedule Trigger** | Runs the workflow automatically |
+| **Telegram Bot API** | User interaction |
+| **OpenAI** | AI-powered task understanding |
+| **Google Sheets** | Task database/storage |
+| **AI Agent** | Processes user requests |
 
 ---
 
-## 🔄 Workflow Architecture
+##  Workflow
 
 ```text
-                ┌──────────────────┐
-                │  Schedule Trigger│
-                └────────┬─────────┘
-                         │
-                         ▼
-                ┌──────────────────┐
-                │     AI Agent     │
-                └────────┬─────────┘
-                         │
-                         ▼
-                ┌──────────────────┐
-                │ OpenAI Chat Model│
-                └────────┬─────────┘
-                         │
-                         ▼
-                ┌──────────────────┐
-                │ Telegram Message │
-                └────────┬─────────┘
-                         │
-                         ▼
-                      👤 User
+User
+  │
+  ▼
+Telegram Trigger
+  │
+  ▼
+AI Agent
+  │
+  ├── OpenAI Chat Model
+  │
+  ├── Create Task → Google Sheets
+  │
+  ├── Get Task → Google Sheets
+  │
+  ├── Complete Task → Google Sheets
+  │
+  └── Delete Task → Google Sheets
+  │
+  ▼
+Send Telegram Response
 ```
 <img width="2848" height="1116" alt="Smart To Do List" src="https://github.com/user-attachments/assets/14618074-4b64-4d65-8a3f-7effe98973f2" />
